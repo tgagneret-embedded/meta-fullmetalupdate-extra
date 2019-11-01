@@ -1,4 +1,4 @@
-MACHINE ??= 'genericx86-64'
+MACHINE ??= 'qemux86-64'
 DISTRO ?= 'poky'
 PACKAGE_CLASSES ?= "package_rpm"
 EXTRA_IMAGE_FEATURES ?= "debug-tweaks"

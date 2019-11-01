@@ -1,0 +1,6 @@
+# short-description: Create Raspberry Pi SD card image
+# long-description: Creates a partitioned SD card image for use with
+# Raspberry Pi. Boot files are located in the first vfat partition.
+
+part / --source otaimage --ondisk hda --fstype=ext4 --label root --align 4096
+part /${APP_DIRECTORY} --ondisk hda --fstype=ext4 --source rawcopy --sourceparams="file=${CONTAINERS_DIRECTORY}/fullmetalupdate-containers-package-${MACHINE}.ext4" --label apps --active --align 4096
